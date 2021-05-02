@@ -66,6 +66,30 @@ const questionsFurtherInstallationRequirements = [
   },
 ];
 
+const questionsUsageRequirements = [
+  {
+    type: "confirm",
+    name: "usage",
+    message: "Are there any usage information?",
+  },
+];
+
+const questionsUsageInfo = [
+  {
+    type: "input",
+    name: "usageInfo",
+    message: "Type your usage information below:",
+  },
+];
+
+const questionsFurtherUsageInfo = [
+  {
+    type: "confirm",
+    name: "furtherUsage",
+    message: "Are there any further usage information?",
+  },
+];
+
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {};
 
