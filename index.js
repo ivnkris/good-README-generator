@@ -121,7 +121,7 @@ const inquirerData = async () => {
         );
       }
     } else {
-      installationDataString = "No installation requirements";
+      installationDataString = "No installation requirements ";
     }
     const installationDataObject = {
       installationData: installationDataString,

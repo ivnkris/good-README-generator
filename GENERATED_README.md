@@ -1,14 +1,14 @@
-# Beautiful Title For a Beautiful Project
+# ThiS is a Long TiTle to Illustrate a Point
 
-  ![BSD_3 license](https://img.shields.io/pypi/l/Django)
+  ![MIT license](https://img.shields.io/apm/l/vim-mode)
   
   ## Description
   
-  Lorem ipsum, I don't have gypsum
+  
   
   ## Table of Contents
   
-    - [Beautiful Title For a Beautiful Project](#Beautiful-Title-For-a-Beautiful-Project)
+    - [ThiS is a Long TiTle to Illustrate a Point](#this-is-a-long-title-to-illustrate-a-point)
     - [Description](#description)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
@@ -21,31 +21,28 @@
   ## Installation
   
   ```
-  No installation requirement
+  No installation requirements
   ```
   
   ## Usage
   
-  	- Use it carefully
-	- but not too carefully
-	- But still quite carefully
-
+  No usage information
   
   ## License
   
-  BSD_3 license
-  Find out more on: https://opensource.org/licenses/BSD-3-Clause
+  MIT license
+  Find out more on: https://opensource.org/licenses/MIT
   
   ## Contributing
   
-  They cannot
+  
   
   ## Tests
   
-  No test requirements
+  
   
   ## Questions
   
-  - View my [GitHub](https://github.com/ivnkris) profile
-  - Email me at krisztian.ivan@gmail.com
+  - View my [GitHub](https://github.com/) profile
+  - Email me at 
   

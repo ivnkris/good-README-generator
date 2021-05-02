@@ -62,7 +62,11 @@ const renderLicenseSection = (license) => {
 
 const sliceInstallString = (string) => string.slice(0, -1);
 
-const titleLinkGenerator = (title) => title.replace(/\s/g, "-");
+const titleLinkGenerator = (title) => {
+  const titleLinkNoSpace = title.replace(/\s/g, "-");
+  const titleLinkFinal = titleLinkNoSpace.toLowerCase();
+  return titleLinkFinal;
+};
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
