@@ -60,6 +60,8 @@ const renderLicenseSection = (license) => {
   }
 };
 
+const sliceInstallString = (string) => string.slice(0, -2);
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
   return `# ${data.title}
@@ -87,7 +89,7 @@ const generateMarkdown = (data) => {
   ## Installation
   
   \`\`\`
-  ${data.installationData}
+  ${sliceInstallString(data.installationData)}
   \`\`\`
   
   ## Usage
