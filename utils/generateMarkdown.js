@@ -29,19 +29,19 @@ const renderLicenseLink = (license) => {
   let licenseLink;
   switch (license) {
     case "MIT":
-      licenseLink = "Find out more on: https://opensource.org/licenses/MIT";
+      licenseLink = "\nFind out more on: https://opensource.org/licenses/MIT";
       break;
     case "APACHE_2.0":
       licenseLink =
-        "Find out more on: https://www.apache.org/licenses/LICENSE-2.0";
+        "\nFind out more on: https://www.apache.org/licenses/LICENSE-2.0";
       break;
     case "GPL_3.0":
       licenseLink =
-        "Find out more on: https://www.gnu.org/licenses/gpl-3.0.en.html";
+        "\nFind out more on: https://www.gnu.org/licenses/gpl-3.0.en.html";
       break;
     case "BSD_3":
       licenseLink =
-        "Find out more on: https://opensource.org/licenses/BSD-3-Clause";
+        "\nFind out more on: https://opensource.org/licenses/BSD-3-Clause";
       break;
     case "None":
       licenseLink = "";
