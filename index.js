@@ -110,7 +110,7 @@ const inquirerData = async () => {
   const installationData = async () => {
     let installationDataString = "";
     const isRequired = await inquirer.prompt(questionsInstallationRequirements);
-    if (isRequired) {
+    if (isRequired.installation) {
       let isLooping = { furtherInstallation: true };
       while (isLooping.furtherInstallation) {
         const newString = await inquirer.prompt(questionsInstallationCode);
@@ -120,6 +120,8 @@ const inquirerData = async () => {
           questionsFurtherInstallationRequirements
         );
       }
+    } else {
+      installationDataString = "No installation requirements";
     }
     const installationDataObject = {
       installationData: installationDataString,
@@ -130,13 +132,15 @@ const inquirerData = async () => {
   const usageData = async () => {
     let usageDataString = "";
     const isRequired = await inquirer.prompt(questionsUsageRequirements);
-    if (isRequired) {
+    if (isRequired.usage) {
       let isLooping = { furtherUsage: true };
       while (isLooping.furtherUsage) {
         const newString = await inquirer.prompt(questionsUsageInfo);
         usageDataString = usageDataString + `- ${newString.usageInfo}\n`;
         isLooping = await inquirer.prompt(questionsFurtherUsageInfo);
       }
+    } else {
+      usageDataString = "No usage information";
     }
     const usageDataObject = {
       usageData: usageDataString,

@@ -4,20 +4,20 @@ const renderLicenseBadge = (license) => {
   let licenseBadge;
   switch (license) {
     case "MIT":
-      licenseLink = "https://img.shields.io/apm/l/vim-mode";
+      licenseBadge = "https://img.shields.io/apm/l/vim-mode";
       break;
     case "APACHE_2.0":
-      licenseLink = "https://img.shields.io/crates/l/rustc-serialize/0.3.24";
+      licenseBadge = "https://img.shields.io/crates/l/rustc-serialize/0.3.24";
       break;
     case "GPL_3.0":
-      licenseLink =
+      licenseBadge =
         "https://img.shields.io/eclipse-marketplace/l/notepad4e?label=GPL%203.0";
       break;
     case "BSD_3":
-      licenseLink = "https://img.shields.io/pypi/l/Django";
+      licenseBadge = "https://img.shields.io/pypi/l/Django";
       break;
     case "None":
-      licenseLink = "";
+      licenseBadge = "";
       break;
   }
   return licenseBadge;
@@ -30,7 +30,7 @@ const renderLicenseLink = (license) => {};
 // Create a function that returns the license section of README
 // If there is no license, return 'No'
 const renderLicenseSection = (license) => {
-  if (license === "none") {
+  if (license === "None") {
     return "No";
   } else {
     return license;
