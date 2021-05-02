@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questionsBasicProjectInfo = [
   {
     type: "input",
     name: "title",
@@ -24,11 +24,6 @@ const questions = [
     type: "confirm",
     name: "installation",
     message: "Are there any installation requirements?",
-  },
-  {
-    type: "input",
-    name: "installationCode",
-    message: "Type in the installation code directly here:",
   },
 ];
 
