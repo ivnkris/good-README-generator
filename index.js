@@ -20,6 +20,26 @@ const questionsBasicProjectInfo = [
     name: "description",
     message: "What is the project's description?",
   },
+  {
+    type: "input",
+    name: "contributing",
+    message: "How can people contribute to the project?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "Are there any tests for this project?",
+  },
+  {
+    type: "input",
+    name: "gitHub",
+    message: "What is your gitHub username?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your e-mail address?",
+  },
 ];
 
 const questionsInstallationRequirements = [
