@@ -14,7 +14,51 @@ const renderLicenseSection = (license) => {};
 const generateMarkdown = (data) => {
   return `# ${data.title}
 
-`;
+  ![mit license](https://img.shields.io/badge/license-MIT-green) (question 2 - choices)
+  
+  ## Description
+  
+  ${data.description}
+  
+  ## Table of Contents
+  
+  - [${data.title}](#${data.title})
+    - [Description](#description)
+    - [Table of Contents](#table-of-contents)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+  
+  ## Installation
+  
+  \`\`\`
+  ${data.installationData}
+  \`\`\`
+  
+  ## Usage
+  
+  ${data.usageData}
+  
+  ## License
+  
+  ${data.license}
+  
+  ## Contributing
+  
+ ${data.contributing}
+  
+  ## Tests
+  
+  ${data.tests}
+  
+  ## Questions
+  
+  - View my [GitHub](https://github.com/${data.gitHub}) profile
+  - Email me at ${data.email}
+  `;
 };
 
 module.exports = generateMarkdown;
