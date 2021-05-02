@@ -7,10 +7,11 @@ In this project I have created a README generator using Node.js with the inquire
 ## Table of Contents
 
 - [Good README Generator](#good-readme-generator)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Link to the Demo Video](#link-to-the-demo-video)
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Link to the Demo Video](#link-to-the-demo-video)
+- [Link to GitHub Repository](#link-to-github-repository)
 
 ## Installation
 
@@ -21,3 +22,7 @@ npm install inquirer
 ## Link to the Demo Video
 
 https://drive.google.com/file/d/1IsFhAf4qHtNd0gJ1FB4aTDP8qScHxcq5/view
+
+## Link to GitHub Repository
+
+https://github.com/ivnkris/good-README-generator
