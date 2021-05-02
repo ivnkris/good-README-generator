@@ -104,8 +104,11 @@ const writeToFile = (fileName, data) => {
   fs.writeFile(fileName, data, errorHandling);
 };
 
-// TODO: Create a function to initialize app
+const inquirerData = () => {};
+
+// Create a function to initialize app
 const init = () => {
+  const data = inquirerData();
   const generatedMarkdown = generateMarkdown(data);
   writeToFile("GENERATED_README.md", generatedMarkdown);
 };
