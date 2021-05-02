@@ -1,6 +1,6 @@
-# t
+# t\
 
-  ![No license]()
+  ![APACHE_2.0 license](https://img.shields.io/crates/l/rustc-serialize/0.3.24)
   
   ## Description
   
@@ -8,7 +8,7 @@
   
   ## Table of Contents
   
-    - [t](#t)
+    - [t\](#t\)
     - [Description](#description)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
@@ -30,7 +30,7 @@
   
   ## License
   
-  No license
+  APACHE_2.0 license
   
   ## Contributing
   
