@@ -104,6 +104,7 @@ const writeToFile = (fileName, data) => {
   fs.writeFile(fileName, data, errorHandling);
 };
 
+// Create a function to collect data using inquirer
 const inquirerData = async () => {
   const basicData = await inquirer.prompt(questionsBasicProjectInfo);
 

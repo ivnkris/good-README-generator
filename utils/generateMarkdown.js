@@ -23,7 +23,7 @@ const renderLicenseBadge = (license) => {
   return licenseBadge;
 };
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 const renderLicenseLink = (license) => {
   let licenseLink;
@@ -60,8 +60,10 @@ const renderLicenseSection = (license) => {
   }
 };
 
+// remove new line from end of installation information
 const sliceInstallString = (string) => string.slice(0, -1);
 
+// convert title link into markdown link format
 const titleLinkGenerator = (title) => {
   const titleLinkNoSpace = title.replace(/\s/g, "-");
   const titleLinkFinal = titleLinkNoSpace.toLowerCase();
