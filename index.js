@@ -105,7 +105,7 @@ const writeToFile = (fileName, data) => {
 };
 
 const inquirerData = async () => {
-  await inquirer.prompt(questionsBasicProjectInfo);
+  return await inquirer.prompt(questionsBasicProjectInfo);
 };
 
 // Create a function to initialize app
