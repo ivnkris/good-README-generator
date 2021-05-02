@@ -68,58 +68,59 @@ const titleLinkGenerator = (title) => {
   return titleLinkFinal;
 };
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 const generateMarkdown = (data) => {
-  return `# ${data.title}
+  return `
+# ${data.title}
 
-  ![${renderLicenseSection(data.license)} license](${renderLicenseBadge(
+![${renderLicenseSection(data.license)} license](${renderLicenseBadge(
     data.license
   )})
   
-  ## Description
+## Description
   
-  ${data.description}
+${data.description}
   
-  ## Table of Contents
+## Table of Contents
   
-    - [${data.title}](#${titleLinkGenerator(data.title)})
-    - [Description](#description)
-    - [Table of Contents](#table-of-contents)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+1. [${data.title}](#${titleLinkGenerator(data.title)})
+2. [Description](#description)
+3. [Table of Contents](#table-of-contents)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [License](#license)
+7. [Contributing](#contributing)
+8. [Tests](#tests)
+9. [Questions](#questions)
   
-  ## Installation
+## Installation
   
-  \`\`\`
-  ${sliceInstallString(data.installationData)}
-  \`\`\`
+\`\`\`
+${sliceInstallString(data.installationData)}
+\`\`\`
   
-  ## Usage
+## Usage
   
-  ${data.usageData}
+${data.usageData}
   
-  ## License
+## License
   
-  ${renderLicenseSection(data.license)} license
-  ${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)} license
+${renderLicenseLink(data.license)}
   
-  ## Contributing
+## Contributing
   
-  ${data.contributing}
+${data.contributing}
   
-  ## Tests
+## Tests
   
-  ${data.tests}
+${data.tests}
   
-  ## Questions
+## Questions
   
-  - View my [GitHub](https://github.com/${data.gitHub}) profile
-  - Email me at ${data.email}
-  `;
+- View my [GitHub](https://github.com/${data.gitHub}) profile
+- Email me at ${data.email}
+`;
 };
 
 module.exports = generateMarkdown;
