@@ -20,10 +20,29 @@ const questionsBasicProjectInfo = [
     name: "description",
     message: "What is the project's description?",
   },
+];
+
+const questionsInstallationRequirements = [
   {
     type: "confirm",
     name: "installation",
     message: "Are there any installation requirements?",
+  },
+];
+
+const questionsInstallationCode = [
+  {
+    type: "input",
+    name: "installationCode",
+    message: "Type your installation code directly below:",
+  },
+];
+
+const questionsFurtherInstallationRequirements = [
+  {
+    type: "confirm",
+    name: "furtherInstallation",
+    message: "Are there any further installation requirements?",
   },
 ];
 
