@@ -22,7 +22,7 @@ const generateMarkdown = (data) => {
   
   ## Table of Contents
   
-  - [${data.title}](#${data.title})
+    - [${data.title}](#${data.title})
     - [Description](#description)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
