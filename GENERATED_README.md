@@ -1,14 +1,14 @@
-# t\
+# Beautiful Title For a Beautiful Project
 
-  ![APACHE_2.0 license](https://img.shields.io/crates/l/rustc-serialize/0.3.24)
+  ![BSD_3 license](https://img.shields.io/pypi/l/Django)
   
   ## Description
   
-  d
+  Lorem ipsum, I don't have gypsum
   
   ## Table of Contents
   
-    - [t\](#t\)
+    - [Beautiful Title For a Beautiful Project](#Beautiful-Title-For-a-Beautiful-Project)
     - [Description](#description)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
@@ -21,27 +21,31 @@
   ## Installation
   
   ```
-  No installation requirements
+  No installation requirement
   ```
   
   ## Usage
   
-  No usage information
+  	- Use it carefully
+	- but not too carefully
+	- But still quite carefully
+
   
   ## License
   
-  APACHE_2.0 license
+  BSD_3 license
+  Find out more on: https://opensource.org/licenses/BSD-3-Clause
   
   ## Contributing
   
-  c
+  They cannot
   
   ## Tests
   
-  t
+  No test requirements
   
   ## Questions
   
-  - View my [GitHub](https://github.com/g) profile
-  - Email me at e
+  - View my [GitHub](https://github.com/ivnkris) profile
+  - Email me at krisztian.ivan@gmail.com
   

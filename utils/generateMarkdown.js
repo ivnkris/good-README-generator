@@ -60,7 +60,7 @@ const renderLicenseSection = (license) => {
   }
 };
 
-const sliceInstallString = (string) => string.slice(0, -2);
+const sliceInstallString = (string) => string.slice(0, -1);
 
 const titleLinkGenerator = (title) => title.replace(/\s/g, "-");
 
