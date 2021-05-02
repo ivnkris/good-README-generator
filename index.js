@@ -127,9 +127,27 @@ const inquirerData = async () => {
     return installationDataObject;
   };
 
-  const installationDataObject = await installationData();
+  const usageData = async () => {
+    let usageDataString = "";
+    const isRequired = await inquirer.prompt(questionsUsageRequirements);
+    if (isRequired) {
+      let isLooping = { furtherUsage: true };
+      while (isLooping.furtherUsage) {
+        const newString = await inquirer.prompt(questionsUsageInfo);
+        usageDataString = usageDataString + `${newString.usageInfo}\n`;
+        isLooping = await inquirer.prompt(questionsFurtherUsageInfo);
+      }
+    }
+    const usageDataObject = {
+      usageData: usageDataString,
+    };
+    return usageDataObject;
+  };
 
-  return { ...basicData, ...installationDataObject };
+  const installationDataObject = await installationData();
+  const usageDataObject = await usageData();
+
+  return { ...basicData, ...installationDataObject, ...usageDataObject };
 };
 
 // Create a function to initialize app
