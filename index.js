@@ -104,11 +104,14 @@ const writeToFile = (fileName, data) => {
   fs.writeFile(fileName, data, errorHandling);
 };
 
-const inquirerData = () => {};
+const inquirerData = async () => {
+  await inquirer.prompt(questionsBasicProjectInfo);
+};
 
 // Create a function to initialize app
-const init = () => {
-  const data = inquirerData();
+const init = async () => {
+  const data = await inquirerData();
+  console.log(data);
   const generatedMarkdown = generateMarkdown(data);
   writeToFile("GENERATED_README.md", generatedMarkdown);
 };
