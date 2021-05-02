@@ -105,7 +105,31 @@ const writeToFile = (fileName, data) => {
 };
 
 const inquirerData = async () => {
-  return await inquirer.prompt(questionsBasicProjectInfo);
+  const basicData = await inquirer.prompt(questionsBasicProjectInfo);
+
+  const installationData = async () => {
+    let installationDataString = "";
+    const isRequired = await inquirer.prompt(questionsInstallationRequirements);
+    if (isRequired) {
+      let isLooping = { furtherInstallation: true };
+      while (isLooping.furtherInstallation) {
+        const newString = await inquirer.prompt(questionsInstallationCode);
+        installationDataString =
+          installationDataString + `${newString.installationCode}\n`;
+        isLooping = await inquirer.prompt(
+          questionsFurtherInstallationRequirements
+        );
+      }
+    }
+    const installationDataObject = {
+      installationData: installationDataString,
+    };
+    return installationDataObject;
+  };
+
+  const installationDataObject = await installationData();
+
+  return { ...basicData, ...installationDataObject };
 };
 
 // Create a function to initialize app
