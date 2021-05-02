@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questionsBasicProjectInfo = [
   {
     type: "input",
@@ -90,8 +90,10 @@ const questionsFurtherUsageInfo = [
   },
 ];
 
-// TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {};
+// Create a function to write README file
+const generatedMarkdown = generateMarkdown(data);
+
+const writeToFile = ("GENERATED_README.md", generatedMarkdown) => {};
 
 // TODO: Create a function to initialize app
 const init = () => {};
