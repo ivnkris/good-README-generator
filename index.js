@@ -134,7 +134,7 @@ const inquirerData = async () => {
       let isLooping = { furtherUsage: true };
       while (isLooping.furtherUsage) {
         const newString = await inquirer.prompt(questionsUsageInfo);
-        usageDataString = usageDataString + `-${newString.usageInfo}\n`;
+        usageDataString = usageDataString + `- ${newString.usageInfo}\n`;
         isLooping = await inquirer.prompt(questionsFurtherUsageInfo);
       }
     }
