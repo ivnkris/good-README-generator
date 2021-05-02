@@ -1,7 +1,7 @@
 
 # 
 
-![MIT license](https://img.shields.io/apm/l/vim-mode)
+![APACHE_2.0 license](https://img.shields.io/crates/l/rustc-serialize/0.3.24)
   
 ## Description
   
@@ -22,20 +22,18 @@
 ## Installation
   
 ```
-No installation requirements
+g
 ```
   
 ## Usage
   
-- test
-- test test
-- test test test
-
+No usage information
   
 ## License
   
-MIT license
-Find out more on: https://opensource.org/licenses/MIT
+APACHE_2.0 license
+
+Find out more on: https://www.apache.org/licenses/LICENSE-2.0
   
 ## Contributing
   
