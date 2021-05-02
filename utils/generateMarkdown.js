@@ -1,11 +1,7 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const renderLicenseBadge = (license) => {};
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-const renderLicenseLink = (license) => {
-  let licenseLink;
+const renderLicenseBadge = (license) => {
+  let licenseBadge;
   switch (license) {
     case "MIT":
       licenseLink = "https://img.shields.io/apm/l/vim-mode";
@@ -24,8 +20,12 @@ const renderLicenseLink = (license) => {
       licenseLink = "";
       break;
   }
-  return licenseLink;
+  return licenseBadge;
 };
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+const renderLicenseLink = (license) => {};
 
 // Create a function that returns the license section of README
 // If there is no license, return 'No'
@@ -41,7 +41,7 @@ const renderLicenseSection = (license) => {
 const generateMarkdown = (data) => {
   return `# ${data.title}
 
-  ![${renderLicenseSection(data.license)} license](${renderLicenseLink(
+  ![${renderLicenseSection(data.license)} license](${renderLicenseBadge(
     data.license
   )})
   
