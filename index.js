@@ -1,9 +1,9 @@
-// Include packages needed for this application
-const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
+const inquirer = require("inquirer");
 
-// Create an array of questions for user input
+const generateMarkdown = require("./utils/generateMarkdown");
+const writeToFile = require("./utils/writeToFile");
+
 const questionsBasicProjectInfo = [
   {
     type: "input",
@@ -91,76 +91,75 @@ const questionsFurtherUsageInfo = [
   },
 ];
 
-// Create a function to write README file
-const writeToFile = (fileName, data) => {
-  const errorHandling = (err) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log("Readme file generated!");
-    }
-  };
-
-  fs.writeFile(fileName, data, errorHandling);
-};
-
-// Create a function to collect data using inquirer
 const inquirerData = async () => {
   const basicData = await inquirer.prompt(questionsBasicProjectInfo);
 
-  const installationData = async () => {
-    let installationDataString = "";
-    const isRequired = await inquirer.prompt(questionsInstallationRequirements);
-    if (isRequired.installation) {
-      let isLooping = { furtherInstallation: true };
-      while (isLooping.furtherInstallation) {
-        const newString = await inquirer.prompt(questionsInstallationCode);
-        installationDataString =
-          installationDataString + `${newString.installationCode}\n`;
-        isLooping = await inquirer.prompt(
+  const getInstallationData = async () => {
+    const { installation } = await inquirer.prompt(
+      questionsInstallationRequirements
+    );
+
+    if (installation) {
+      let inLoop = true;
+      let installationDataString = "";
+
+      while (inLoop) {
+        const { installationCode } = await inquirer.prompt(
+          questionsInstallationCode
+        );
+
+        installationDataString += `${installationCode}\n`;
+
+        const { furtherInstallation } = await inquirer.prompt(
           questionsFurtherInstallationRequirements
         );
+
+        inLoop = furtherInstallation;
       }
+
+      return installationDataString;
     } else {
-      installationDataString = "No installation requirements ";
+      return "No installation requirements";
     }
-    const installationDataObject = {
-      installationData: installationDataString,
-    };
-    return installationDataObject;
   };
 
-  const usageData = async () => {
-    let usageDataString = "";
-    const isRequired = await inquirer.prompt(questionsUsageRequirements);
-    if (isRequired.usage) {
-      let isLooping = { furtherUsage: true };
-      while (isLooping.furtherUsage) {
-        const newString = await inquirer.prompt(questionsUsageInfo);
-        usageDataString = usageDataString + `- ${newString.usageInfo}\n`;
-        isLooping = await inquirer.prompt(questionsFurtherUsageInfo);
+  const getUsageData = async () => {
+    const { usage } = await inquirer.prompt(questionsUsageRequirements);
+
+    if (usage) {
+      let inLoop = true;
+      let usageDataString = "";
+
+      while (inLoop) {
+        const { usageInfo } = await inquirer.prompt(questionsUsageInfo);
+
+        usageDataString += `- ${usageInfo}\n`;
+
+        const { furtherUsage } = await inquirer.prompt(
+          questionsFurtherUsageInfo
+        );
+
+        inLoop = furtherUsage;
       }
+
+      return usageDataString;
     } else {
-      usageDataString = "No usage information";
+      return "No usage information";
     }
-    const usageDataObject = {
-      usageData: usageDataString,
-    };
-    return usageDataObject;
   };
 
-  const installationDataObject = await installationData();
-  const usageDataObject = await usageData();
+  const installationData = await getInstallationData();
+  const usageData = await getUsageData();
 
-  return { ...basicData, ...installationDataObject, ...usageDataObject };
+  return { ...basicData, installationData, usageData };
 };
 
-// Create a function to initialize app
 const init = async () => {
   const data = await inquirerData();
+
   const generatedMarkdown = generateMarkdown(data);
+
   writeToFile("GENERATED_README.md", generatedMarkdown);
 };
 
-// Function call to initialize app
 init();
