@@ -1,15 +1,15 @@
 
-# This is an Example Title
+# Foo
 
-![BSD_3 license](https://img.shields.io/pypi/l/Django)
+![MIT license](https://img.shields.io/apm/l/vim-mode)
   
 ## Description
   
-lorem ipsum I don't have gypsum
+Bar
   
 ## Table of Contents
   
-1. [This is an Example Title](#this-is-an-example-title)
+1. [Foo](#foo)
 2. [Description](#description)
 3. [Table of Contents](#table-of-contents)
 4. [Installation](#installation)
@@ -22,31 +22,33 @@ lorem ipsum I don't have gypsum
 ## Installation
   
 ```
-node install inquirer
-node install this package too
+npm i
+npm run start
+npm run dev
 ```
   
 ## Usage
   
-- This is a usage information
-- This one is another one
+- open file
+- run file
+- close file
 
   
 ## License
   
-BSD_3 license
+MIT license
 
-Find out more on: https://opensource.org/licenses/BSD-3-Clause
+Find out more on: https://opensource.org/licenses/MIT
   
 ## Contributing
   
-Just submit a pull request
+By code
   
 ## Tests
   
-No test requirements
+Nope
   
 ## Questions
   
-- View my [GitHub](https://github.com/ivnkris) profile
-- Email me at krisztian.ivan@gmail.com
+- View my [GitHub](https://github.com/me) profile
+- Email me at me
